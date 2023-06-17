@@ -1,0 +1,6 @@
+generated ssh key, added to repository
+clone repository
+set git user name and email (use the github no-reply email)
+
+dnf install python3-pip
+pip install conan
