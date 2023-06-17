@@ -1,0 +1,17 @@
+Look in specified folder for spreadsheets of transactions. For now they are guaranteed transactions only from within a month.
+Merge the transactions into one master record.
+    Find account transfers across accounts which don't affect the overall balance and cancel them
+Use this data to produce a report in different output formats. 
+    One which can be saved as a pdf and/or printed for record keeping
+    And another which sends data to a web-based dashboard to show the trends and stuff
+
+specify in a yaml file or other config file which directories host which accounts, so that parsers can be matched to files
+    For each bank, use an abstract factory to generate the parser for it, throwing an error if such a parser doesn't exist
+    When the parser is generated, find each file in that directory and give it to the parser using the ParseFile() method.
+
+Updated records can be seamlessly added, meaning that RecordCruncher will replace old data with new, even when that old data
+is already in a final report.
+
+Spreadsheet format should include starting and ending balances. RecordCruncher will use this to verify the totaling, and
+check against the previous month's ending-total to ensure no transactions are missed.
+

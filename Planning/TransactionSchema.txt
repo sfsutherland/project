@@ -1,0 +1,6 @@
+Date,Detailed Description,Amount,Account[],Type[],Label[],Description[]
+
+usaa_credit_2023_05.csv
+{ACCOUNT}_{TYPE}_{YEAR}_{MO}.csv
+
+Date,Description,Original Description,Category,Amount,Status

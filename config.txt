@@ -1,0 +1,2 @@
+# Accounts: name,directory,schema
+usaa, /home/stephen/Downloads/, {ACCOUNT}_{TYPE}_{YEAR}_{MO}.csv
