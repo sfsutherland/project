@@ -1,4 +1,7 @@
-#include "AccountParsers/AccountParser.h"
+//#include "AccountParsers/AccountParser.h"
+
+#include <iostream>
+#include "PROJECT_config.h"
 
 int main(int argc, char**argv)
 {
@@ -14,5 +17,6 @@ int main(int argc, char**argv)
     //          ReportCruncher.Crunch(report);
     //      }
     // ReportCruncher.GenerateFinalReport(outputDir);
+    std::cout << "This is project, version " << PROJECT_VERSION_MAJOR << "." << PROJECT_VERSION_MINOR << "\n";
     return 0;
 }
