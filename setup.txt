@@ -5,4 +5,7 @@ set git user name and email (use the github no-reply email)
 dnf install python3-pip cmake
 pip install conan==1.58
 
+#required for boost log for some reason
+conan profile update settings.compiler.libcxx=libstdc++11 default
+
 conan install . --build missing
