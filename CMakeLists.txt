@@ -4,5 +4,14 @@ configure_file(PROJECT_config.h.in PROJECT_config.h)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+#set(CMAKE_BUILD_TYPE Debug)
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 add_executable(PROJECT main.cpp)
-target_include_directories(PROJECT PUBLIC "${PROJECT_BINARY_DIR}")
+
+target_include_directories(PROJECT PUBLIC ${PROJECT_BINARY_DIR})
+target_include_directories(PROJECT PUBLIC ${CONAN_INCLUDE_DIRS_SPDLOG})
+
+target_link_libraries(PROJECT ${CONAN_LIBS_SPDLOG} ${CONAN_LIBS_FMT})
