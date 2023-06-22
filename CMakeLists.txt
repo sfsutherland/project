@@ -8,6 +8,8 @@ set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
 set(TESTS_DIR ${CMAKE_SOURCE_DIR}/tests)
 configure_file(${CMAKE_BINARY_DIR}/PROJECT_config.h.in ${SRC_DIR}/PROJECT_config.h)
 
+enable_testing()
+
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
